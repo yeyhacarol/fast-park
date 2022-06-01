@@ -5,20 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
+    <link rel="stylesheet" type="text/css" href="css/vacancy-controll.css">
     <title>Controle do estacionamento</title>
 </head>
 
 <body>
-    <div class="parking-controll-container">
-        <img src="img/parking-controll-background.png" alt="background controle do estacionamento">
-        <div class="controll-pannel">
+    <section class="parking">
+        <div class="controlling-parking-container">
             <img src="img/parking-icon.png" alt="controle do estacionamento" title="controle do estacionamento">
-            <img src="img/vehicle-icon.png" alt="controle de veículos" title="controle de veículos">
+            <div class="parking-title">
+                <p>Controle do estacionamento</p>
+                <div class="lineup">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="parking-container">
+                <div class="parking-lot-container">
+                    <p>| estacionamento</p>
+                    <p>Você está no Fast Park</p>
+                    <p>Rua Elton Silva, 905 - Centro, Jandira - SP, 06600-025</p>
+                </div>
+                <form class="parking-vacancy">
+                    <p>| vagas</p>
+                    <div class="vacancies">
+                        <div class="floor-hall">
+                            <div class="floor">
+                                <span>Piso:</span>
+                                <select name="" id="">
+                                    <option value="" selected>Selecione um piso</option>
+                                </select>
+                            </div>
+                            <div class="hall">
+                                <span>Corredor:</span>
+                                <div class="select">
+                                    <select name="" id="">
+                                        <option value="" selected>Selecione um corredor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="preferencial">
+                                <input type="checkbox" name="" id="">Preferencial
+                            </div>
+                        </div>
+                        <div class="vacancy-type">
+                            <div class="vacancy">
+                                <span>Vaga:</span>
+                                <input type="text" placeholder="Nome da vaga">
+                            </div>
+                            <div class="type">
+                                <span>Tipo:</span>
+                                <select name="" id="">
+                                    <option value="" selected>Selecione um tipo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save">
+                        <span>SALVAR</span>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="logo">
-            <img src="img/logo.png" alt="logo fast park">
+
+        <div class="parking-controll-container">
+            <div class="parking-controll-content">
+                <img src="img/parking-controll-background.png" alt="background controle do estacionamento">
+                <div class="controll-pannel">
+                    <img src="img/parking-icon.png" alt="controle do estacionamento" title="controle do estacionamento">
+                    <img src="img/vehicle-icon.png" alt="controle de veículos" title="controle de veículos">
+                </div>
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo fast park">
+                </div>
+                <div class="right-reserved">
+                    <p>&copy; 2022 Fast Park. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="your-vacancies">
+        <div class="walking-header">
+            <div class="walking-car">
+                <img src="img/car-gif.gif" alt="">
+            </div>
+        </div>
+        <div class="parking-title">
+            <p>Suas vagas</p>
+            <div class="lineup">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="vacancy-container">
+            <div class="vacancy-lot-container">
+                <p>| vagas existentes</p>
+            </div>
+            <div class="vacancy-table">
+                <div class="label">
+                    <span>Piso</span>
+                    <span>Corredor</span>
+                    <span>Vaga</span>
+                    <span>Preferencial</span>
+                </div>
+                <div class="label">
+                    <span>1</span>
+                    <span>1</span>
+                    <span>A11</span>
+                    <span>SIM</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
