@@ -1,0 +1,34 @@
+.plaque-filter {
+    display: flex;
+    justify-content: center;
+}
+
+.plaque-filter input {
+    width: 350px;
+    height: 40px;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.icon {
+    background: url(../img/search.png) no-repeat left;
+    background-size: 25px;
+    background-position: 98%;
+}
+
+.historic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-historic p {
+    font-size: 1.5rem;
+    color: #DF265E;
+}

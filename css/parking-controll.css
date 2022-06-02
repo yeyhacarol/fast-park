@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .parking {
     width: 100%;
-    height: 90vh;
+    height: 125vh;
     display: flex;
     flex-direction: row;
 }
@@ -22,10 +9,6 @@ body {
     width: 100%;
     height: inherit;
     flex-grow: 1;
-}
-
-.controlling-parking-container .parking-title {
-    padding-top: 40px;
 }
 
 .parking-title {
@@ -64,7 +47,7 @@ body {
     width: 740px;
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .parking-lot-container p:first-child,
@@ -90,12 +73,12 @@ body {
     align-self: flex-start;
 }
 
-.vacancies {
+.vacancies, .vacancy-values {
     display: flex;
     align-self: flex-start;
     flex-direction: row;
     gap: 160px;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 .floor,
@@ -146,6 +129,19 @@ input[type=checkbox] {
     color: #fff;
 }
 
+.hours {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first-hour,
+.other-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .controlling-parking-container img {
     width: 60px;
     height: 60px;
@@ -159,7 +155,7 @@ input[type=checkbox] {
 
 .parking-controll-content {
     width: 480px;
-    height: 90vh;
+    height: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,8 +168,8 @@ input[type=checkbox] {
 }
 
 .controll-pannel {
-    width: 110px;
-    height: 10px;
+    width: 233px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     position: fixed;

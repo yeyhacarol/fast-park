@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
     <link rel="stylesheet" type="text/css" href="css/vacancy-controll.css">
     <title>Controle do estacionamento</title>
@@ -12,7 +13,7 @@
 <body>
     <section class="parking">
         <div class="controlling-parking-container">
-            <img src="img/parking-icon.png" alt="controle do estacionamento" title="controle do estacionamento">
+            <img src="img/parking-icon.png" alt="controle do estacionamento" title="página atual">
             <div class="parking-title">
                 <p>Controle do estacionamento</p>
                 <div class="lineup">
@@ -31,18 +32,16 @@
                     <div class="vacancies">
                         <div class="floor-hall">
                             <div class="floor">
-                                <span>Piso:</span>
+                                <span>Tipo:</span>
                                 <select name="" id="">
-                                    <option value="" selected>Selecione um piso</option>
+                                    <option value="" selected>Selecione um tipo</option>
                                 </select>
                             </div>
                             <div class="hall">
                                 <span>Corredor:</span>
-                                <div class="select">
-                                    <select name="" id="">
-                                        <option value="" selected>Selecione um corredor</option>
-                                    </select>
-                                </div>
+                                <select name="" id="">
+                                    <option value="" selected>Selecione um corredor</option>
+                                </select>
                             </div>
                             <div class="preferencial">
                                 <input type="checkbox" name="" id="">Preferencial
@@ -65,22 +64,47 @@
                         <span>SALVAR</span>
                     </div>
                 </form>
+                <form class="parking-vacancy hour-values">
+                    <p>| valores</p>
+                    <div class="vacancy-values">
+                        <div class="type">
+                            <span>Tipo:</span>
+                            <select name="" id="">
+                                <option value="" selected>Selecione um tipo</option>
+                            </select>
+                        </div>
+                        <div class="hours">
+                            <div class="first-hour">
+                                <span>Primeira hora:</span>
+                                <input type="time">
+                            </div>
+                            <div class="other-hours">
+                                <span>Demais horas:</span>
+                                <input type="time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save">
+                        <span>SALVAR</span>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="parking-controll-container">
-            <div class="parking-controll-content">
-                <img src="img/parking-controll-background.png" alt="background controle do estacionamento">
-                <div class="controll-pannel">
-                    <img src="img/parking-icon.png" alt="controle do estacionamento" title="controle do estacionamento">
-                    <img src="img/vehicle-icon.png" alt="controle de veículos" title="controle de veículos">
-                </div>
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo fast park">
-                </div>
-                <div class="right-reserved">
-                    <p>&copy; 2022 Fast Park. All rights reserved.</p>
-                </div>
+        <div class="parking-controll-content">
+            <img src="img/parking-controll-background.png" alt="background controle do estacionamento">
+            <div class="controll-pannel">
+                <a href="index.html"><img src="img/parking-icon.png" alt="controle do estacionamento"
+                        title="controle do estacionamento"></a>
+                <img src="img/vehicle-icon.png" alt="controle de veículos" title="controle de veículos">
+                <img src="img/historic.png" alt="histórico" title="histórico">
+                <a href="open-historic.html"><img src="img/out-car.png" alt="ajustar saída" title="inserir saída"></a>
+            </div>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo fast park">
+            </div>
+            <div class="right-reserved">
+                <p>&copy; 2022 Fast Park. All rights reserved.</p>
             </div>
         </div>
     </section>
@@ -108,12 +132,86 @@
                     <span>Corredor</span>
                     <span>Vaga</span>
                     <span>Preferencial</span>
+                    <span>Ações</span>
                 </div>
                 <div class="label">
                     <span>1</span>
                     <span>1</span>
                     <span>A11</span>
-                    <span>SIM</span>
+                    <span>
+                        <img src="img/preferencial.png" alt="preferencial">
+                    </span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
+                </div>
+                <div class="label">
+                    <span>1</span>
+                    <span>1</span>
+                    <span>A11</span>
+                    <span>
+                        <img src="img/preferencial.png" alt="preferencial">
+                    </span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
+                </div>
+                <div class="label">
+                    <span>1</span>
+                    <span>1</span>
+                    <span>A11</span>
+                    <span>
+                        <img src="img/preferencial.png" alt="preferencial">
+                    </span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
+                </div>
+                <div class="label">
+                    <span>1</span>
+                    <span>1</span>
+                    <span>A11</span>
+                    <span>
+                        <img src="img/preferencial.png" alt="preferencial">
+                    </span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancy-price-container">
+            <div class="vacancy-lot-container">
+                <p>| valor das vagas</p>
+            </div>
+            <div class="vacancy-price-table">
+                <div class="label">
+                    <span>Tipo</span>
+                    <span>Primeira hora</span>
+                    <span>Demais Horas</span>
+                    <span>Ações</span>
+                </div>
+                <div class="label">
+                    <span>Carro</span>
+                    <span>R$ 10,00</span>
+                    <span>+ R$ 8,00</span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
+                </div>
+                <div class="label">
+                    <span>Moto</span>
+                    <span>R$ 8,00</span>
+                    <span>+ R$ 3,00</span>
+                    <div class="label actions">
+                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
+                        <img src="img/edit.png" alt="editar" title="editar vaga">
+                    </div>
                 </div>
             </div>
         </div>

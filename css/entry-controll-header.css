@@ -1,0 +1,66 @@
+header {
+    width: 100%;
+    height: 480px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 480px;
+}
+
+.controll-pannel {
+    width: 233px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    gap: 10px;
+    z-index: 10;
+}
+
+.controll-pannel img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.actual-page {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+}
+
+.logo img {
+    width: inherit;
+    height: inherit;
+}
+
+.right-reserved {
+    position: absolute;
+    bottom: 25px;
+}
+
+.right-reserved p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #fff;
+}

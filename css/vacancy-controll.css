@@ -1,6 +1,6 @@
 .your-vacancies {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 }
 
 .walking-header {
@@ -18,6 +18,10 @@
 }
 
 .vacancy-container {
+    margin-bottom: 150px;
+}
+
+.vacancy-container, .vacancy-price-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,4 +63,40 @@
 .label span {
     width: 100%;
     text-align: center;
+}
+
+.label.actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+    cursor: pointer;
+}
+
+.label img {
+    width: 28px;
+    height: 28px;
+}
+
+.label.actions img {
+    width: 20px;
+    height: 23px;
+}
+
+.label.actions img:nth-child(2) {
+    width: 25px;
+    height: 25px;
+}
+
+.vacancy-price-table {
+    width: 587px;
+    min-height: 159px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
 }
