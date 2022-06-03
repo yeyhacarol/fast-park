@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/scripts/setDateTimeEnter.js" defer></script>
+    <title>cadastro de veículos</title>
+  </head>
+  <body>
+    <main>
+      <div class="left-container">
+        <div class="icons-container">
+          <img class="icon" src="../imgs/carIcon.png" />
+          <img class="icon" src="../imgs//parkingIcon.png" />
+          <img class="icon" src="../imgs/Group 14.png"/>
+          <img class="icon" src="../imgs/Group 15.png"/>
+        </div>
+        <div class="logo-container">
+          <img src="../imgs/logo.png" alt="car-parking-logo" class="logo" />
+        </div>
+        <div class="left-container-footer">
+          <span class="left-container-footer-text">
+            © 2022 Fast Park. All rights reserved.
+            </span>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="icon-selected-container">
+          <img class="selected-icon" src="../imgs/carIcon.png" />
+        </div>
+        <div class="title-container">
+          <span class="title">Controle de veículos</span>
+        </div>
+        <div class="lines-container">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="client-info-container">
+          <span class="info-title">| cliente</span>
+          <div class="infos-container">
+            <div class="client-info">
+              <span class="info">Nome:</span>
+              <input type="text" class="inputs" />
+            </div>
+            <div class="client-info">
+              <span class="info">telefone(opcional):</span>
+              <input type="text" class="inputs"/>
+            </div>
+          </div>
+        </div>
+        <div class="client-info-container">
+          <span class="info-title">| veículo</span>
+          <div class="infos-container">
+            <div class="client-info">
+              <span class="info">Placa:</span>
+              <input type="text" class="inputs" />
+            </div>
+            <div class="client-info">
+              <span class="info">categoria:</span>
+              <select class="inputs">
+                <option value="valor1" selected>Valor 1</option>
+                <option value="valor2" >Valor 2</option>
+                <option value="valor3">Valor 3</option>
+              </select>
+            </div> 
+          </div>
+          <div class="client-info-container">
+            <div class="infos-container">
+              <div class="client-info">
+                <span class="info">Cor:</span>
+                <select class="inputs">
+                  <option value="valor1" selected>Valor 1</option>
+                  <option value="valor2" >Valor 2</option>
+                  <option value="valor3">Valor 3</option>
+                </select>
+              </div>
+              <div class="client-info">
+                <span class="info">Modelo:</span>
+                <input type="text" class="inputs"/>
+              </div> 
+            </div>
+        </div>
+      </div>
+      <div class="client-info-container">
+        <span class="info-title">| vaga</span>
+        <div class="infos-container">
+          <div class="client-info">
+            <span class="info">Vaga:</span>
+            <select class="inputs">
+              <option value="valor1" selected>Valor 1</option>
+              <option value="valor2" >Valor 2</option>
+              <option value="valor3">Valor 3</option>
+            </select>
+          </div>
+          <div class="client-info" id="hour">
+      
+          </div> 
+        </div>
+        <div class="client-info-container">
+          <div class="infos-container">
+            <div class="client-info">
+              <span class="info">valor:</span>
+              <input type="text" class="inputs" />
+            </div>
+            <div class="client-info" id="hour">
+              <span class="info">data/hora entrada:</span>
+              <input type="datetime-local" id="meeting-time"
+              name="meeting-time"
+              min="2022-02-02T00:00"  class="inputs ">
+            </div> 
+          </div>
+      </div>
+    </div>
+    <div class="submit-container">
+      <input class="submit" type="submit"/>
+    </div>
+    
+    </main>
+  </body>
+</html>

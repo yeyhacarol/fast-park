@@ -1,7 +1,7 @@
 /* menu lateral */
 .parking-controll-content {
     width: clamp(160px, 45vw, 480px);
-    height: 100vh;
+    height: auto;
 
     display: flex;
     justify-content: center;
@@ -10,9 +10,10 @@
 
     position: relative;
 
-    background: url('../img/parking-controll-background.png') no-repeat;
-    background-size: clamp(180px, 45vw, 480px) 100vh;
+    background-image: url(../img/parking-controll-background.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center; 
 }
 
 .controll-pannel {
@@ -21,18 +22,20 @@
     cursor: pointer;
     gap: 10px;
 
+    z-index: 10;
     position: fixed;
     top: 10px;
     right: 10px;
 }
-.controll-pannel img {
-    width: clamp(28px, 5vw, 50px);
-    height: clamp(28px, 5vw, 50px);
+
+.controll-pannel img,
+header .actual-page {
+    width: clamp(35px, 5vw, 50px);
+    height: clamp(35px, 5vw, 50px);
 }
 
 .logo {
     width: clamp(125px, 25vw, 200px);
-    height: clamp(30px, 5vw, 50px);
 
     position: absolute;
 }
@@ -72,6 +75,8 @@
 }
 
 .parking-title {
+    width: 90%;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -119,14 +124,16 @@
     margin-bottom: 2%;
 }
 .parking-lot-container p:nth-child(1),
-.parking-vacancy p {
+.parking-vacancy p,
+.vacancy-lot {
     color: #7F3E71;
     margin-bottom: 3%;
 }
 .parking-lot-container p,
 .parking-vacancy p,
 .vacancies span,
-.vacancy-values span {
+.vacancy-values span,
+.vacancy-container p {
     font-size: clamp(0.875rem, 2vw, 1.4rem);
 }
 
@@ -136,7 +143,7 @@
     align-items: flex-start;
     flex-direction: column;
 
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .vacancies,
@@ -219,4 +226,108 @@ input[type=checkbox] {
     font-size: clamp(0.9rem, 2vw, 1.4rem);
     font-weight: 300;
     color: #fff;
+}
+
+/* suas vagas */
+/* vagas existentes */
+.your-vacancies {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.walking-header {
+    width: 100%;
+    height: 70px;
+
+    margin-bottom: 4%;
+
+    background-color: rgba(127, 62, 113, .25);
+}
+
+.vacancy-container {
+    width: 85%;
+}
+
+.vacancy-table,
+.history-table {
+    width: clamp(290px, 55vw, 990px);
+    min-height: 200px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    margin-bottom: 10%;
+
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.label {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #000;
+}
+
+.label span {
+    width: 100%;
+
+    font-size: clamp(0.875rem, 2vw, 1.4rem);
+
+    text-align: center;
+}
+
+.label.actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+    cursor: pointer;
+}
+
+.label img {
+    width: clamp(20px, 5vw, 25px);
+    height: clamp(20px, 5vw, 25px);
+}
+
+.label.actions img {
+    width: clamp(15px, 5vw, 20px);
+    height: clamp(18px, 5vw, 23px);
+}
+
+.label.actions img:nth-child(2) {
+    width: clamp(20px, 5vw, 25px);
+    height: clamp(20px, 5vw, 25px);
+}
+
+@media screen and (max-width: 610px) {
+    .parking-controll-content .controll-pannel {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .parking-controll-content {
+        width: 0px;
+        background: none;
+    }
+    .parking-controll-content .logo {
+        display: none;
+    }
+    .parking-controll-content .right-reserved {
+        display: none;
+    }
 }

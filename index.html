@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
-    <link rel="stylesheet" type="text/css" href="css/vacancy-controll.css">
     <title>Controle do estacionamento</title>
 </head>
 
@@ -27,6 +26,7 @@
                     <p>Você está no Fast Park</p>
                     <p>Rua Elton Silva, 905 - Centro, Jandira - SP, 06600-025</p>
                 </div>
+
                 <form class="parking-vacancy">
                     <p>| vagas</p>
                     <div class="vacancies">
@@ -91,31 +91,34 @@
             </div>
         </div>
 
-        <div class="parking-controll-container">
-            <div class="parking-controll-content">
-                <div class="controll-pannel">
+        <div class="parking-controll-content">
+            <div class="controll-pannel">
+                <div class="a">
                     <a href="index.html"><img src="img/parking-icon.png" alt="controle do estacionamento"
                             title="controle do estacionamento"></a>
                     <img src="img/vehicle-icon.png" alt="controle de veículos" title="controle de veículos">
+                </div>
+                <div class="b">
                     <img src="img/historic.png" alt="histórico" title="histórico">
-                    <a href="open-historic.html"><img src="img/out-car.png" alt="ajustar saída" title="inserir saída"></a>
-                </div>
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo fast park">
-                </div>
-                <div class="right-reserved">
-                    <p>&copy; 2022 Fast Park. All rights reserved.</p>
+                    <a href="open-historic.html"><img src="img/out-car.png" alt="ajustar saída"
+                            title="inserir saída"></a>
                 </div>
             </div>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo fast park">
+            </div>
+            <div class="right-reserved">
+                <p>&copy; 2022 Fast Park. All rights reserved.</p>
+            </div>
         </div>
-    </section>
 
-   <!--  <section class="your-vacancies">
-        <div class="walking-header">
-            <div class="walking-car">
-                <img src="img/car-gif.gif" alt="">
-            </div>
-        </div>
+    </section>
+    <div class="walking-header">
+        <!-- <div class="walking-car">
+            <img src="img/car-gif.gif" alt="">
+        </div> -->
+    </div>
+    <section class="your-vacancies">
         <div class="parking-title">
             <p>Suas vagas</p>
             <div class="lineup">
@@ -124,7 +127,7 @@
             </div>
         </div>
         <div class="vacancy-container">
-            <div class="vacancy-lot-container">
+            <div class="vacancy-lot">
                 <p>| vagas existentes</p>
             </div>
             <div class="vacancy-table">
@@ -159,41 +162,17 @@
                         <img src="img/edit.png" alt="editar" title="editar vaga">
                     </div>
                 </div>
-                <div class="label">
-                    <span>1</span>
-                    <span>1</span>
-                    <span>A11</span>
-                    <span>
-                        <img src="img/preferencial.png" alt="preferencial">
-                    </span>
-                    <div class="label actions">
-                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
-                        <img src="img/edit.png" alt="editar" title="editar vaga">
-                    </div>
-                </div>
-                <div class="label">
-                    <span>1</span>
-                    <span>1</span>
-                    <span>A11</span>
-                    <span>
-                        <img src="img/preferencial.png" alt="preferencial">
-                    </span>
-                    <div class="label actions">
-                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
-                        <img src="img/edit.png" alt="editar" title="editar vaga">
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="vacancy-price-container">
-            <div class="vacancy-lot-container">
+        <div class="vacancy-container">
+            <div class="vacancy-lot">
                 <p>| valor das vagas</p>
             </div>
-            <div class="vacancy-price-table">
+            <div class="vacancy-table price">
                 <div class="label">
                     <span>Tipo</span>
                     <span>Primeira hora</span>
-                    <span>Demais Horas</span>
+                    <span>Demais horas</span>
                     <span>Ações</span>
                 </div>
                 <div class="label">
@@ -216,7 +195,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 </body>
 
 </html>
