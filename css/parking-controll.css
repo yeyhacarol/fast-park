@@ -1,196 +1,41 @@
-.parking {
-    width: 100%;
-    height: 125vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.controlling-parking-container {
-    width: 100%;
-    height: inherit;
-    flex-grow: 1;
-}
-
-.parking-title {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 55px;
-}
-
-.parking-title p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.lineup {
-    display: flex;
-    flex-direction: row;
-    gap: 44px;
-}
-
-.line {
-    width: 213px;
-    height: 0px;
-    border: 1px solid #000;
-}
-
-.parking-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.parking-lot-container {
-    width: 740px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 45px;
-}
-
-.parking-lot-container p:first-child,
-.parking-vacancy p:first-child {
-    color: #7F3E71;
-    margin-bottom: 20px;
-}
-
-.parking-lot p:nth-child(2) {
-    margin-bottom: 15px;
-}
-
-.parking-vacancy {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-.parking-vacancy p:first-child {
-    display: flex;
-    align-self: flex-start;
-}
-
-.vacancies, .vacancy-values {
-    display: flex;
-    align-self: flex-start;
-    flex-direction: row;
-    gap: 160px;
-    margin-bottom: 70px;
-}
-
-.floor,
-.hall,
-.vacancy,
-.type {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    gap: 10px;
-}
-
-input,
-select {
-    width: 290px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-.preferencial {
-    display: flex;
-}
-
-input[type=checkbox] {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.save {
-    width: 145px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #7F3E71;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.save span {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #fff;
-}
-
-.hours {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.first-hour,
-.other-hours {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.controlling-parking-container img {
-    width: 60px;
-    height: 60px;
-    padding: 10px 0px 0px 10px;
-}
-
-.parking-controll-container {
-    display: flex;
-    justify-content: end;
-}
-
+/* menu lateral */
 .parking-controll-content {
-    width: 480px;
-    height: 125vh;
+    width: clamp(160px, 45vw, 480px);
+    height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
+    flex-direction: column;
 
-.parking-controll-content img {
-    width: inherit;
-    height: inherit;
+    position: relative;
+
+    background: url('../img/parking-controll-background.png') no-repeat;
+    background-size: clamp(180px, 45vw, 480px) 100vh;
+    background-size: cover;
 }
 
 .controll-pannel {
-    width: 233px;
-    height: 50px;
     display: flex;
-    flex-direction: row;
+
+    cursor: pointer;
+    gap: 10px;
+
     position: fixed;
     top: 10px;
     right: 10px;
-    gap: 10px;
-    z-index: 10;
 }
-
 .controll-pannel img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+    width: clamp(28px, 5vw, 50px);
+    height: clamp(28px, 5vw, 50px);
 }
 
 .logo {
-    width: 200px;
-    height: 50px;
+    width: clamp(125px, 25vw, 200px);
+    height: clamp(30px, 5vw, 50px);
+
     position: absolute;
 }
-
 .logo img {
     width: inherit;
     height: inherit;
@@ -200,9 +45,178 @@ input[type=checkbox] {
     position: absolute;
     bottom: 25px;
 }
-
 .right-reserved p {
-    font-size: 0.875rem;
+    font-size: clamp(0.688rem, 2vw, 0.875rem);
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+/* controle do estacionamento */
+/* "header" */
+.parking {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.controlling-parking-container {
+    width: inherit;
+}
+.controlling-parking-container img {
+    width: clamp(38px, 5vw, 60px);
+    height: clamp(38px, 5vw, 60px);
+
+    padding: 10px 0px 0px 10px;
+}
+
+.parking-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10px;
+    margin-bottom: 8%;
+}
+.parking-title p {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: bold;
+    text-align: center;
+}
+
+.lineup {
+    width: clamp(200px, 50vw, 470px);
+    height: 1px;
+
+    display: flex;
+
+    padding: 0px 10px;
+    gap: 10%;
+}
+.line {
+    width: inherit;
+    height: inherit;
+
+    border: 1px solid;
+}
+
+/* estacionamento, vagas, valores */
+.parking-container, 
+.parking-vacancy {
+    display: grid;
+    place-items: center;
+}
+
+.parking-lot-container {
+    margin-bottom: 5%;
+}
+.parking-lot-container,
+.parking-vacancy {
+    width: 80%;
+}
+.parking-lot-container p:nth-child(1) {
+    margin-bottom: 2%;
+}
+.parking-lot-container p:nth-child(1),
+.parking-vacancy p {
+    color: #7F3E71;
+    margin-bottom: 3%;
+}
+.parking-lot-container p,
+.parking-vacancy p,
+.vacancies span,
+.vacancy-values span {
+    font-size: clamp(0.875rem, 2vw, 1.4rem);
+}
+
+/* vagas, valores */
+.parking-vacancy {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-bottom: 10%;
+}
+
+.vacancies,
+.vacancy-values {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 10%;
+}
+
+.floor-hall,
+.vacancy-values .type {
+    margin-right: 100px;
+}
+.vacancy-type {
+
+}
+.floor, 
+.hall,
+.vacancy,
+.type,
+.first-hour,
+.other-hours {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+input[type=text],
+select {
+    width: clamp(120px, 48vw, 290px);
+    height: 40px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.7rem, 1.4vw, 1.4rem);
+}
+.preferencial {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 3%;
+
+    font-size: clamp(0.7rem, 1.4vw, 1.4rem);
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 40px;
+
+    border: 1px solid #000;
+}
+
+/* botão */
+.parking-vacancy .save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save {
+    width: clamp(100px, 15vw, 145px);
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background-color: #7F3E71;
+    cursor: pointer;
+}
+.save span {
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
     font-weight: 300;
     color: #fff;
 }
