@@ -1,7 +1,6 @@
 /* menu lateral */
 .parking-controll-content {
-    width: clamp(160px, 45vw, 480px);
-    height: auto;
+    width: clamp(160px, 45vw, 100%);
 
     display: flex;
     justify-content: center;
@@ -9,11 +8,13 @@
     flex-direction: column;
 
     position: relative;
+}
 
-    background-image: url(../img/parking-controll-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center; 
+.background {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 .controll-pannel {
@@ -27,11 +28,18 @@
     top: 10px;
     right: 10px;
 }
-
 .controll-pannel img,
+.actual-page,
 header .actual-page {
-    width: clamp(35px, 5vw, 50px);
-    height: clamp(35px, 5vw, 50px);
+    width: clamp(35px, 5vw, 55px);
+    height: clamp(35px, 5vw, 55px);
+}
+
+.parking .actual-page {
+    width: clamp(45px, 5vw, 65px);
+    height: clamp(45px, 5vw, 65px);
+
+    padding: 10px 0px 0px 10px;
 }
 
 .logo {
@@ -41,7 +49,6 @@ header .actual-page {
 }
 .logo img {
     width: inherit;
-    height: inherit;
 }
 
 .right-reserved {
@@ -66,16 +73,13 @@ header .actual-page {
 
 .controlling-parking-container {
     width: inherit;
-}
-.controlling-parking-container img {
-    width: clamp(38px, 5vw, 60px);
-    height: clamp(38px, 5vw, 60px);
-
-    padding: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .parking-title {
-    width: 90%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -83,6 +87,9 @@ header .actual-page {
 
     gap: 10px;
     margin-bottom: 8%;
+}
+.parking-title.parking {
+    padding-top: 10%;
 }
 .parking-title p {
     font-size: clamp(1rem, 3vw, 1.3rem);
@@ -107,18 +114,8 @@ header .actual-page {
 }
 
 /* estacionamento, vagas, valores */
-.parking-container, 
-.parking-vacancy {
-    display: grid;
-    place-items: center;
-}
-
 .parking-lot-container {
-    margin-bottom: 5%;
-}
-.parking-lot-container,
-.parking-vacancy {
-    width: 80%;
+    margin-bottom: 10%;
 }
 .parking-lot-container p:nth-child(1) {
     margin-bottom: 2%;
@@ -139,6 +136,8 @@ header .actual-page {
 
 /* vagas, valores */
 .parking-vacancy {
+    width: 100%;
+
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -149,19 +148,15 @@ header .actual-page {
 .vacancies,
 .vacancy-values {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+
+    gap: clamp(0px, 3vw, 60px) !important;
 
     margin-bottom: 10%;
 }
 
-.floor-hall,
-.vacancy-values .type {
-    margin-right: 100px;
-}
-.vacancy-type {
-
-}
 .floor, 
 .hall,
 .vacancy,
@@ -171,7 +166,7 @@ header .actual-page {
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     gap: 10px;
 }
 
@@ -185,6 +180,9 @@ select {
 
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(0.7rem, 1.4vw, 1.4rem);
+}
+input[type=text] {
+    padding-left: 10px;
 }
 .preferencial {
     display: flex;
@@ -204,10 +202,14 @@ input[type=checkbox] {
 }
 
 /* botão */
-.parking-vacancy .save {
+.btn-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.btn-container:nth-child(odd) {
+    margin-bottom: 15%;
 }
 
 .save {
@@ -310,13 +312,6 @@ input[type=checkbox] {
 .label.actions img:nth-child(2) {
     width: clamp(20px, 5vw, 25px);
     height: clamp(20px, 5vw, 25px);
-}
-
-@media screen and (max-width: 610px) {
-    .parking-controll-content .controll-pannel {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 480px) {

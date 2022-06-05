@@ -7,7 +7,7 @@ const month = today.getMonth
 
 const div = document.createElement('div')
 div.innerHTML = `
-<span class="info">data/hora entrada:</span>
+<span class="info">Data/hora entrada:</span>
 <input type="datetime-local" class="inputs " id="meeting-time"
 name="meeting-time" value="${year.toString}-${month.toString}-${day.toString}T${hour.toString}:${minute.toString}"
 min="${year.toString}-${month.toString}-${day.toString}T00:00" max="${year.toString}-${month.toString}-${day.toString}T23:00">`

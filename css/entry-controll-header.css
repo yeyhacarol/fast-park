@@ -49,8 +49,6 @@ header .controll-pannel {
     background: url(../img/search.png) no-repeat left;
     background-size: clamp(20px, 5vw, 25px);
     background-position: 98%;
-
-    cursor: pointer;
 }
 
 .historic {
