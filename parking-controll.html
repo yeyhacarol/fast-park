@@ -71,18 +71,20 @@
                     <div class="vacancy-values">
                         <div class="type">
                             <span>Tipo:</span>
-                            <select name="" id="">
+                            <select name="" id="" required>
                                 <option value="" selected>Selecione um tipo</option>
                             </select>
                         </div>
                         <div class="hours">
                             <div class="first-hour">
                                 <span>Primeira hora:</span>
-                                <input type="text" placeholder="R$ 10,00">
+                                <input type="number" step="0.1" placeholder="10.00" required
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             </div>
                             <div class="other-hours">
                                 <span>Demais horas:</span>
-                                <input type="text" placeholder="R$ 3,00" title="valor será somado ao de primeira hora">
+                                <input type="number" step="0.1" placeholder="3.00" title="valor será somado ao de primeira hora" required
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                             </div>
                         </div>
                     </div>
@@ -98,17 +100,13 @@
         <div class="parking-controll-content">
             <img src="img/parking-controll-background.png" alt="background" class="background">
             <div class="controll-pannel">
-                <div class="icon">
-                    <a href="parking-controll.html"><img src="img/parking-icon.png" alt="controle do estacionamento"
-                            title="controle do estacionamento"></a>
-                    <a href="index.html"><img src="img/vehicle-icon.png" alt="controle de veículos"
-                            title="controle de veículos"></a>
-                </div>
-                <div class="icon">
-                    <a href="historic.html"><img src="img/historic.png" alt="histórico" title="histórico"></a>
-                    <a href="open-historic.html"><img src="img/out-car.png" alt="ajustar saída"
-                            title="inserir saída"></a>
-                </div>
+                <a href="parking-controll.html"><img src="img/parking-icon.png" alt="controle do estacionamento"
+                        title="controle do estacionamento"></a>
+                <a href="index.html"><img src="img/vehicle-icon.png" alt="controle de veículos"
+                        title="controle de veículos"></a>
+                <a href="historic.html"><img src="img/historic.png" alt="histórico" title="histórico"></a>
+                <a href="open-historic.html"><img src="img/out-car.png" alt="ajustar saída" title="inserir saída"></a>
+
             </div>
             <div class="logo">
                 <img src="img/logo.png" alt="logo fast park">

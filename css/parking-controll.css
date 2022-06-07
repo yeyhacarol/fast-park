@@ -89,7 +89,7 @@ header .actual-page {
     margin-bottom: 8%;
 }
 .parking-title.parking {
-    padding-top: 10%;
+    padding-top: 5%;
 }
 .parking-title p {
     font-size: clamp(1rem, 3vw, 1.3rem);
@@ -130,7 +130,9 @@ header .actual-page {
 .parking-vacancy p,
 .vacancies span,
 .vacancy-values span,
-.vacancy-container p {
+.vacancy-container p,
+/* modal */
+.modal-content span {
     font-size: clamp(0.875rem, 2vw, 1.4rem);
 }
 
@@ -162,7 +164,11 @@ header .actual-page {
 .vacancy,
 .type,
 .first-hour,
-.other-hours {
+.other-hours,
+/* modal */
+.name,
+.plaque,
+.departure-time {
     display: flex;
     flex-direction: column;
 
@@ -171,7 +177,10 @@ header .actual-page {
 }
 
 input[type=text],
-select {
+input[type=number],
+select,
+/* modal */
+input[type=datetime-local] {
     width: clamp(120px, 48vw, 290px);
     height: 40px;
 
@@ -179,9 +188,10 @@ select {
     border-radius: 5px;
 
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.7rem, 1.4vw, 1.4rem);
+    font-size: clamp(0.9rem, 1.4vw, 1.4rem);
 }
-input[type=text] {
+input[type=text], 
+input[type=number] {
     padding-left: 10px;
 }
 .preferencial {

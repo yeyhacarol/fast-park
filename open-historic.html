@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
     <link rel="stylesheet" type="text/css" href="css/entry-controll-header.css">
-    <link rel="stylesheet" type="text/css" href="css/entry-controll.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <script src="./scripts/modal.js" defer></script>
     <title>Histórico de entrada</title>
 </head>
 
@@ -46,9 +47,34 @@
                 <span>QTP5F71</span>
                 <span>Inserir</span>
                 <div class="label actions">
-                    <img src="img/edit.png" alt="editar" title="editar vaga">
+                    <img src="img/edit.png" id="edit" alt="editar" title="editar vaga">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="btn-out">
+                <div id="out">X</div>
+            </div>
+            <form action="" class="exit-time">
+                <div class="name">
+                    <span>Nome:</span>
+                    <input type="text">
+                </div>
+                <div class="plaque">
+                    <span>Placa:</span>
+                    <input type="text">
+                </div>
+                <div class="departure-time">
+                    <span>Data/hora saída:</span>
+                    <input type="datetime-local">
+                </div>
+                <div class="save">
+                    <span>SALVAR</span>
+                </div>
+            </form>
         </div>
     </div>
 </body>
