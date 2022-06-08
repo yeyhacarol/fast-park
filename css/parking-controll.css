@@ -222,7 +222,8 @@ input[type=checkbox] {
     margin-bottom: 15%;
 }
 
-.save {
+#save-vacancy,
+#save-value {
     width: clamp(100px, 15vw, 145px);
     height: 50px;
 
@@ -234,7 +235,8 @@ input[type=checkbox] {
     background-color: #7F3E71;
     cursor: pointer;
 }
-.save span {
+#save-vacancy span,
+#save-value span {
     font-size: clamp(0.9rem, 2vw, 1.4rem);
     font-weight: 300;
     color: #fff;
