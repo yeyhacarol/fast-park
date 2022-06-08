@@ -7,18 +7,35 @@ const createVacancy = async (vacancy) => {
         'method': 'POST',
         'body': JSON.stringify(vacancy),
         'headers': {
-            'Content-type': 'application/json'
+            'content-type': 'application/json'
         }
     }
 
     const response = await fetch(url, options)
-    console.log(response.ok)
+
 }
+
+const filterVacancy = async () => {
+    const response = await fetch(url)
+
+    const data = await response.json()
+
+    let filtered = data.filter((item) => {
+        if (item == item.localizacao.sigla) 
+            return true;
+
+        console.log(item.localizacao.sigla)
+    })
+}
+
+filterVacancy()
 
 const readVacancies = async () => {
     const response = await fetch(url)
 
-    return await response.json()
+    const data = await response.json()
+
+    return data
 }
 
-export { createVacancy, readVacancies }
+export { createVacancy, filterVacancy, readVacancies }

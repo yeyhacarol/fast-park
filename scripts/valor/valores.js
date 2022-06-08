@@ -1,20 +1,19 @@
 'use strict'
 
-const url = 'http://localhost/FastPark/BackEndFastPark/api/vagas'
+const url = 'http://localhost/FastPark/BackEndFastPark/api/valor'
 
-const createVacancies = async (vacancy) => {
+const createValue = async (value) => {
     const options = {
         'method': 'POST',
-        'body': JSON.stringify(vacancy),
+        'body': JSON.stringify(value),
         'headers': {
             'content-type': 'application/json'
         }
     }
 
     const response = await fetch(url, options)
-    console.log(response.ok)
 }
 
 export {
-    createVacancies
+    createValue
 }
