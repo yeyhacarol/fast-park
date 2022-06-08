@@ -259,10 +259,6 @@ input[type=checkbox] {
     background-color: rgba(127, 62, 113, .25);
 }
 
-.vacancy-container {
-    width: 85%;
-}
-
 .vacancy-table,
 .history-table {
     width: clamp(290px, 55vw, 990px);
@@ -295,8 +291,11 @@ input[type=checkbox] {
     width: 100%;
 
     font-size: clamp(0.875rem, 2vw, 1.4rem);
-
+    
     text-align: center;
+}
+.sigla {
+    text-transform: uppercase;
 }
 
 .label.actions {
@@ -322,6 +321,10 @@ input[type=checkbox] {
 .label.actions img:nth-child(2) {
     width: clamp(20px, 5vw, 25px);
     height: clamp(20px, 5vw, 25px);
+}
+
+.values {
+    width: 100%;
 }
 
 @media screen and (max-width: 480px) {
