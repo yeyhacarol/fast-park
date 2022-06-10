@@ -22,7 +22,7 @@
 
 .modal-content {
     width: clamp(250px, 55vw, 700px);
-    height: 450px;
+    height: clamp(380px, 60vw, 450px);
 
     border-radius: 5px;
 
@@ -64,8 +64,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    gap: 30px;
 }
 
 .modal-content .save {
     background-color: #DF265E;
 }
+

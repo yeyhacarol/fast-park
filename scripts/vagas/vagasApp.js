@@ -1,6 +1,6 @@
 'use strict'
 
-import { createVacancy, filterVacancy, readVacancies } from "./vagas.js"
+import { createVacancy, filterVacancy, readVacancies, readVacancy, updateVacancy } from "./vagas.js"
 
 const createRow = (vacancy) => {
     const row = document.createElement('div')
@@ -14,26 +14,28 @@ const createRow = (vacancy) => {
                 <img src="${vacancy.tbl_tipo.tipo == 'Carro' ? './img/free-car.png' : './img/motorcycle.png'}">
           </span>
           <div class="label actions">
-                <img src="img/delete.png" alt="deletar" title="apagar vaga">
-                <img src="img/edit.png" alt="editar" title="editar vaga">
+                <img src="img/edit.png" id="edit-${vacancy.id}"" alt="editar" title="editar vaga">
           </div>`
 
     return row
 }
 
 const updateTable = async () => {
-    const tableContainer = document.querySelector('.values')
+    const tableContainer = document.getElementById('localization')
 
     const vacancies = await readVacancies()
 
     const rows = vacancies.map(createRow)
-    tableContainer.replaceChildren(...rows)   
+    tableContainer.replaceChildren(...rows)
+
+    document.getElementById('localization').addEventListener('click', editVacancy)
+
 }
 
 const saveVacancy = async () => {
 
     let preferencial = document.getElementById('preferencial')
-    
+
     if (preferencial.checked) {
         preferencial = '1'
     } else {
@@ -42,19 +44,61 @@ const saveVacancy = async () => {
 
     const vacancy = {
         "id": "",
-        "ocupacao": "0",
+        "ocupacao": "1",
         "preferencial": preferencial,
         "id_tipo": document.getElementById('type').value,
         "id_estacionamento": "1",
         "piso": document.getElementById('floor').value,
         "corredor": document.getElementById('hall').value,
-        "sigla": document.getElementById('initials').value
+        "sigla": document.getElementById('initials').value.toUpperCase()
     }
 
-    await createVacancy(vacancy)
+    const form = document.getElementById('parking-vacancy-form')
 
+    if (form.dataset.id) {
+        await updateVacancy(vacancy, form.dataset.id)
+
+        console.log(vacancy)
+
+        alert('Alterações feitas.')
+
+    } else {
+        const filtered = await filterVacancy(vacancy.sigla)
+
+        if (filtered.length > 0) {
+            alert('Vaga já existe.')
+        } else {
+            await createVacancy(vacancy)
+        }
+    }
+
+    location.reload()
+    updateTable()
+
+}
+
+const editVacancy = async (event) => {
+    if (event.target.tagName === 'IMG') {
+
+        const [action, id] = event.target.id.split('-')
+
+        if (action == 'edit') {
+            let vacancy = await readVacancy(id)
+
+            window.scrollTo({ top: 150, behavior: 'smooth' })
+
+            document.getElementById('floor').value = vacancy.localizacao.piso
+            document.getElementById('hall').value = vacancy.localizacao.corredor
+            document.getElementById('preferencial') = vacancy.preferencial
+            document.getElementById('initials').value = vacancy.localizacao.sigla
+            document.getElementById('type').value = vacancy.tbl_tipo.id_tipo
+
+            document.getElementById('parking-vacancy-form').dataset.id = vacancy.id
+        }
+    }
 }
 
 updateTable()
 
 document.getElementById('save-vacancy').addEventListener('click', saveVacancy)
+document.getElementById('parking-vacancy-form').addEventListener('click', editVacancy)

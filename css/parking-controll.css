@@ -137,14 +137,16 @@ header .actual-page {
 }
 
 /* vagas, valores */
-.parking-vacancy {
-    width: 100%;
-
+.parking-values {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: center;
 
-    margin-bottom: 5%;
+    gap: 30px;
+}
+.parking-values span,
+.exit-time span {
+    margin-bottom: 2%;
 }
 
 .vacancies,
@@ -156,24 +158,29 @@ header .actual-page {
 
     gap: clamp(0px, 3vw, 60px) !important;
 
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .floor, 
 .hall,
 .vacancy,
-.type,
-.first-hour,
-.other-hours,
-/* modal */
-.name,
-.plaque,
-.departure-time {
+.type {
     display: flex;
     flex-direction: column;
 
     margin-bottom: 35px;
     gap: 10px;
+}
+/* modal */
+.name,
+.plaque,
+.departure-time,
+.allowed-vehicule,
+.first-hour,
+.other-hours {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 input[type=text],
@@ -227,12 +234,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .btn-container:nth-child(odd) {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 
 #save-vacancy,
-#save-value,
-input[type=submit] {
+/* #save-value, */
+input[type=submit],
+input[type=button] {
     width: clamp(100px, 15vw, 145px);
     height: 50px;
 
@@ -320,17 +328,13 @@ input[type=submit] {
     height: clamp(20px, 5vw, 25px);
 }
 
-.label.actions img {
-    width: clamp(15px, 5vw, 20px);
-    height: clamp(18px, 5vw, 23px);
-}
-
 .label.actions img:nth-child(2) {
     width: clamp(20px, 5vw, 25px);
     height: clamp(20px, 5vw, 25px);
 }
 
-.values {
+#localization,
+#values {
     width: 100%;
 }
 

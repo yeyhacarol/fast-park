@@ -12,5 +12,7 @@ const closeModal = () => {
     document.getElementById('html').style.overflowY = "auto"
 }
 
-document.getElementById('edit').addEventListener('click', openModal)
-document.getElementById('out').addEventListener('click', closeModal)
+export { 
+    openModal,
+    closeModal
+}

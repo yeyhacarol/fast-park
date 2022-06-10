@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
 
-    <script type="module" src="./scripts/vagas/vagasApp.js" defer></script>
-    <script type="module" src="./scripts/valor/valoresApp.js" defer></script>
+    <script type="module" src="./scripts/vagas/vagasApp.js"></script>
+    <script type="module" src="./scripts/valor/valoresApp.js"></script>
+    <script type="module" src="./scripts/modal.js"></script>
     <title>Controle do estacionamento</title>
 </head>
 
@@ -30,32 +32,33 @@
                     <p>Rua Elton Silva, 905 - Centro, Jandira - SP, 06600-025</p>
                 </div>
 
-                <form class="parking-vacancy">
+                <form class="parking-vacancy" id="parking-vacancy-form">
                     <p>| vagas</p>
                     <div class="vacancies">
                         <div class="floor-hall">
                             <div class="floor">
                                 <span>Piso:</span>
-                                <input type="number" id="floor" 
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <input type="number" id="floor"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                             </div>
                             <div class="hall">
                                 <span>Corredor:</span>
-                                <input type="number" id="hall" 
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <input type="number" id="hall"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                             </div>
                             <div class="preferencial">
-                                <input type="checkbox" name="" id="preferencial"><span>Preferencial</span>
+                                <input type="checkbox" name="preferencial" id="preferencial"><span>Preferencial</span>
+                                <input type="checkbox" name="inativar" id="inativar"><span>Inativar</span>
                             </div>
                         </div>
                         <div class="vacancy-type">
                             <div class="vacancy">
                                 <span>Vaga:</span>
-                                <input type="text" placeholder="Nome da vaga" id="initials" required>
+                                <input type="text" maxlength="10" placeholder="Nome da vaga" id="initials" required>
                             </div>
                             <div class="type">
                                 <span>Tipo:</span>
-                                <select name="" id="type" required>
+                                <select name="tipoVeiculo" id="type" required>
                                     <option value="" selected>Selecione um tipo</option>
                                     <option value="1">Carro</option>
                                     <option value="2">Moto</option>
@@ -65,37 +68,6 @@
                     </div>
                     <div class="btn-container">
                         <div id="save-vacancy">
-                            <input type="submit" value="SALVAR">
-                        </div>
-                    </div>
-                </form>
-                <form class="parking-vacancy">
-                    <p>| valores</p>
-                    <div class="vacancy-values">
-                        <div class="type">
-                            <span>Tipo:</span>
-                            <select name="" id="vacancy-type" required>
-                                <option value="" selected>Selecione um tipo</option>
-                                <option value="1">Carro</option>
-                                <option value="2">Moto</option>
-                            </select>
-                        </div>
-                        <div class="hours">
-                            <div class="first-hour">
-                                <span>Primeira hora:</span>
-                                <input type="number" step="0.1" placeholder="10.00" id="first-hour" required
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                            </div>
-                            <div class="other-hours">
-                                <span>Demais horas:</span>
-                                <input type="number" step="0.1" placeholder="3.00" id="other-hour"
-                                    title="valor será somado ao de primeira hora" required
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-container">
-                        <div id="save-value">
                             <input type="submit" value="SALVAR">
                         </div>
                     </div>
@@ -148,8 +120,8 @@
                     <span>Tipo</span>
                     <span>Ações</span>
                 </div>
-                <div class="values">
-                    
+                <div id="localization">
+
                 </div>
             </div>
         </div>
@@ -164,27 +136,40 @@
                     <span>Demais horas</span>
                     <span>Ações</span>
                 </div>
-                <div class="label">
-                    <span>Carro</span>
-                    <span>R$ 10,00</span>
-                    <span>+ R$ 8,00</span>
-                    <div class="label actions">
-                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
-                        <img src="img/edit.png" alt="editar" title="editar vaga">
-                    </div>
-                </div>
-                <div class="label">
-                    <span>Moto</span>
-                    <span>R$ 8,00</span>
-                    <span>+ R$ 3,00</span>
-                    <div class="label actions">
-                        <img src="img/delete.png" alt="deletar" title="apagar vaga">
-                        <img src="img/edit.png" alt="editar" title="editar vaga">
-                    </div>
+                <div id="values">
+
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="btn-out">
+                <div id="out" style="background-color: #7F3E71;">X</div>
+            </div>
+            <form class="parking-values">
+                <div class="allowed-vehicule">
+                    <span>Tipo:</span>
+                    <input type="text" id="tipo" disabled>
+                </div>
+                <div class="first-hour">
+                    <span>Primeira hora:</span>
+                    <input type="text" placeholder="10" maxlength="6" id="hora-inicial"  required
+                        onkeypress="return event.charCode >= 48 || event.charCode <= 57 || event.charCode == 46">
+                </div>
+                <div class="other-hours">
+                    <span>Demais horas:</span>
+                    <input type="text" placeholder="3" maxlength="6" id="demais-horas"
+                        title="valor será somado ao de primeira hora" required
+                        onkeypress="return event.charCode >= 48 || event.charCode <= 57 || event.charCode == 46">
+                </div>
+                <div id="save-value">
+                    <input type="button" value="SALVAR">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
