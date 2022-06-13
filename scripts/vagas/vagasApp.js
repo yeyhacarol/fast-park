@@ -14,7 +14,7 @@ const createRow = (vacancy) => {
                 <img src="${vacancy.tbl_tipo.tipo == 'Carro' ? './img/free-car.png' : './img/motorcycle.png'}">
           </span>
           <div class="label actions">
-                <img src="img/edit.png" id="edit-${vacancy.id}"" alt="editar" title="editar vaga">
+                <img src="img/edit.png" id="edit-${vacancy.id}" alt="editar" title="editar vaga">
           </div>`
 
     return row
@@ -44,7 +44,7 @@ const saveVacancy = async () => {
 
     const vacancy = {
         "id": "",
-        "ocupacao": "1",
+        "ocupacao": "0",
         "preferencial": preferencial,
         "id_tipo": document.getElementById('type').value,
         "id_estacionamento": "1",
@@ -89,7 +89,7 @@ const editVacancy = async (event) => {
 
             document.getElementById('floor').value = vacancy.localizacao.piso
             document.getElementById('hall').value = vacancy.localizacao.corredor
-            document.getElementById('preferencial') = vacancy.preferencial
+            /* document.getElementById('preferencial') = vacancy.preferencial */
             document.getElementById('initials').value = vacancy.localizacao.sigla
             document.getElementById('type').value = vacancy.tbl_tipo.id_tipo
 

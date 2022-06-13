@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/parking-controll.css">
     <link rel="stylesheet" type="text/css" href="css/entry-controll-header.css">
     <link rel="stylesheet" type="text/css" href="css/modal.css">
-    <script type="module" src="./scripts/modal.js" defer></script>
+
+    <script type="module" src="./scripts/saida/saidaApp.js"></script>
     <title>Histórico de entrada</title>
 </head>
 
@@ -36,45 +37,16 @@
     <div class="historic">
         <p>| histórico de entrada</p>
         <div class="history-table">
-            <div class="label">
-                <span>Nome</span>
+            <div class="label history">
                 <span>Placa</span>
+                <span>Vaga</span>
+                <span>Hora Entrada</span>
                 <span>Hora Saída</span>
                 <span>Ações</span>
             </div>
-            <div class="label">
-                <span>Regina</span>
-                <span>QTP5F71</span>
-                <span>Inserir</span>
-                <div class="label actions">
-                    <img src="img/edit.png" id="edit" alt="editar" title="editar vaga">
-                </div>
+            <div id="values">
+                
             </div>
-        </div>
-    </div>
-
-    <div class="modal">
-        <div class="modal-content">
-            <div class="btn-out">
-                <div id="out">X</div>
-            </div>
-            <form action="" class="exit-time">
-                <div class="name">
-                    <span>Nome:</span>
-                    <input type="text">
-                </div>
-                <div class="plaque">
-                    <span>Placa:</span>
-                    <input type="text">
-                </div>
-                <div class="departure-time">
-                    <span>Data/hora saída:</span>
-                    <input type="datetime-local">
-                </div>
-                <div id="save-value">
-                    <input type="submit" value="SALVAR" class="save">
-                </div>
-            </form>
         </div>
     </div>
 </body>
