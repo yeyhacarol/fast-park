@@ -58,9 +58,9 @@ const saveVacancy = async () => {
     if (form.dataset.id) {
         await updateVacancy(vacancy, form.dataset.id)
 
-        console.log(vacancy)
-
         alert('Alterações feitas.')
+
+        location.reload()
 
     } else {
         const filtered = await filterVacancy(vacancy.sigla)
@@ -72,7 +72,7 @@ const saveVacancy = async () => {
         }
     }
 
-    location.reload()
+    
     updateTable()
 
 }
