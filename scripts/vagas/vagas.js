@@ -1,9 +1,9 @@
 'use strict'
 
 const url = 'http://localhost/FastPark/BackEndFastPark/api/vagas'
-document.getElementById('parking-vacancy-form').addEventListener('submit', (event) => {
+/* document.getElementById('parking-vacancy-form').addEventListener('submit', (event) => {
     event.preventDefault()
-})
+}) */
 
 const createVacancy = (vacancy) => {
     const options = {

@@ -60,6 +60,8 @@ const saveVacancy = async () => {
 
         alert('Alterações feitas.')
 
+        location.reload()
+
     } else {
         const filtered = await filterVacancy(vacancy.sigla)
 
@@ -70,7 +72,7 @@ const saveVacancy = async () => {
         }
     }
 
-    location.reload()
+    
     updateTable()
 
 }

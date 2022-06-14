@@ -33,7 +33,7 @@ const createEntry = async (customer, vehicule, entry) => {
 
     await Promise.all(promises).then(erro => {
         console.log(erro)
-        if (erro[0]['Erro'] || erro[1]['Erro'] || erro[2]['Erro']) {
+        if (erro[0]['Erro'] || erro[1]['Erro']) {
             alert('Campos obrigatórios não preenchidos.')
 
         } else {

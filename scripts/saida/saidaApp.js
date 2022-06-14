@@ -30,17 +30,19 @@ const updateTable = async () => {
             let dateValue = event.target.parentElement.previousElementSibling.value
             let data = event.target.parentElement.parentElement.children
 
+            const entry = {
+                "data_entrada": data[2].innerText,
+                "data_saida": dateValue,
+                "id_veiculo": data[1].dataset.id,
+                "id_vaga": data[0].dataset.id
+            }
+
             if (!dateValue) {
                 alert('Insira uma data.')
             } else {
-                await updateEntry({
-                    "data_entrada": data[2].innerText,
-                    "data_saida": dateValue,
-                    "id_veiculo": data[1].dataset.id,
-                    "id_vaga": data[0].dataset.id 
-                }, event.target.dataset.id)
+                await updateEntry(entry, event.target.dataset.id)
 
-                alert('Alterado com sucesso.')
+                /* alert('Alterado com sucesso.') */
             }
         }))
 }
