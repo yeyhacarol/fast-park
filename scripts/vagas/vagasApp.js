@@ -58,8 +58,6 @@ const saveVacancy = async () => {
     if (form.dataset.id) {
         await updateVacancy(vacancy, form.dataset.id)
 
-        console.log(vacancy)
-
         alert('Alterações feitas.')
 
     } else {
@@ -87,9 +85,17 @@ const editVacancy = async (event) => {
 
             window.scrollTo({ top: 150, behavior: 'smooth' })
 
+            let preferencial = document.getElementById('preferencial')
+
+            if (vacancy.preferencial == 1) {
+                preferencial.checked = true
+            } else {
+                preferencial.checked = false
+            }
+
             document.getElementById('floor').value = vacancy.localizacao.piso
             document.getElementById('hall').value = vacancy.localizacao.corredor
-            /* document.getElementById('preferencial') = vacancy.preferencial */
+            vacancy.preferencial 
             document.getElementById('initials').value = vacancy.localizacao.sigla
             document.getElementById('type').value = vacancy.tbl_tipo.id_tipo
 
