@@ -1,6 +1,7 @@
 'use strict'
 
 import { createEntry } from "./cliente.js"
+import { updateOccupation } from "../vagas/vagas.js"
 
 const saveCustomer = async () => {
     let selectCor = document.getElementById('cores');
@@ -23,6 +24,10 @@ const saveCustomer = async () => {
         "data_saida": "0000-00-00 00:00:00",
         "id_vaga": idVaga
     }
+    const occupation = {
+        "id": idVaga,
+        "ocupacao": "1"
+    }
 
     const form = document.getElementById('entry-form')
 
@@ -30,6 +35,8 @@ const saveCustomer = async () => {
         alert('Campos obrigatórios não preenchidos.')
     } else {
         await createEntry(customer, vehicule, vacancy)
+        await updateOccupation(occupation, idVaga)
+        location.reload()
     }
 
 }

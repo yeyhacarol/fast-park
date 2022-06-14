@@ -54,6 +54,20 @@ const updateVacancy = async (vacancy, id) => {
     await fetch(`${url}/${id}`, options)
 }
 
+const updateOccupation = async (ocupation, id) => {
+    const urlOcupar = 'http://localhost/FastPark/BackEndFastPark/api/vagas/ocupar'
+
+    const options = {
+        'method': 'PUT',
+        'body': JSON.stringify(ocupation),
+        'headers': {
+            'content-type': 'application/json'
+        }
+    }
+
+    await fetch(`${urlOcupar}/${id}`, options)
+}
+
 const filterVacancy = async (sigla) => {
     const response = await fetch(url)
 
@@ -72,4 +86,5 @@ export { createVacancy,
          readVacancies, 
          readVacancy,
          updateVacancy,
+         updateOccupation,
          filterVacancy}

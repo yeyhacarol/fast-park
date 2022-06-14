@@ -66,7 +66,6 @@ header .actual-page {
 /* "header" */
 .parking {
     width: 100%;
-    height: 99vh;
 
     display: flex;
     flex-direction: row;
@@ -81,13 +80,13 @@ header .actual-page {
 
 .parking-title {
     width: 100%;
-    height: clamp(10%, 25vw, 20%);
 
     display: flex;
     align-items: center;
     flex-direction: column;
 
     gap: 10px;
+    margin-bottom: 8%;
 }
 .parking-title.parking {
     padding-top: 5%;
@@ -235,7 +234,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .btn-container:nth-child(odd) {
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 
 #save-vacancy,
